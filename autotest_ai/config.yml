@@ -4,15 +4,15 @@
 
 dbt:
   # Path to your dbt models directory (relative to this file)
-  models_dir: models
+  models_dir: ../models
 
 database:
   # SQLAlchemy connection URL
   # PostgreSQL:  postgresql://user:pass@host:5432/dbname
-  # Snowflake:   snowflake://user:pass@account/dbname/schema?warehouse=WH
+  #Snowflake:   snowflake://user:pass@account/dbname/schema?warehouse=WH
   # BigQuery:    bigquery://project/dataset
-  url: snowflake://PAVANITEJA1011:(Pavaniteja1011)@mhfxpqb-fkb24819.snowflakecomputing.com/DBT_SNOW/?warehouse=COMPUTE_WH&schema=PUBLIC
-  schema: PUBLIC
+  url: snowflake://PAVANITEJA1011:%28Pavaniteja1011%29@MHFXPQB-FKB24819/DBT_SNOW/PUBLIC?warehouse=COMPUTE_WH
+  schema: public          # DB schema where dbt materialises models
 
 profiling:
   sample_rows: 1000       # rows sampled per model for profiling
