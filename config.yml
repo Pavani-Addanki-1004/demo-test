@@ -1,0 +1,18 @@
+# ──────────────────────────────────────────────
+# AutoTest AI — Configuration
+# ──────────────────────────────────────────────
+
+dbt:
+  # Path to your dbt models directory (relative to this file)
+  models_dir: models
+
+database:
+  # SQLAlchemy connection URL
+  # PostgreSQL:  postgresql://user:pass@host:5432/dbname
+  # Snowflake:   snowflake://user:pass@account/dbname/schema?warehouse=WH
+  # BigQuery:    bigquery://project/dataset
+  url: postgresql://your_user:your_password@localhost:5432/your_db
+  schema: public          # DB schema where dbt materialises models
+
+profiling:
+  sample_rows: 1000       # rows sampled per model for profiling

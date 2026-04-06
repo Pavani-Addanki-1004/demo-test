@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: DBT_SNOW
+    schema: public
+
+    tables:
+      - name: customerdata
+      - name: productdata
+      - name: salesdata

@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: "Order-level fact table with revenue metrics."
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+      - name: order_date
+        tests: [not_null]
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+      - name: product_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_products')
+              field: product_id
+      - name: revenue
+        tests:
+          - not_null
