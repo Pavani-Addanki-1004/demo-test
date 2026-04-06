@@ -9,7 +9,7 @@ sources:
       - name: orders
 
 models:
-  - name: stg_customers
+  - name: stg_customerdata
     description: "Cleaned/typed customers from raw.customers"
     columns:
       - name: customer_id
@@ -17,7 +17,7 @@ models:
       - name: email
         tests: [not_null]
       - name: created_at
-  - name: stg_products
+  - name: stg_productdata
     description: "Cleaned/typed products from raw.products"
     columns:
       - name: product_id

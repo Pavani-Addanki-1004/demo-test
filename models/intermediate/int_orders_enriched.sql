@@ -1,7 +1,7 @@
 with
 orders as (select * from {{ ref('stg_orders') }}),
-customers as (select * from {{ ref('stg_customers') }}),
-products as (select * from {{ ref('stg_products') }}),
+customers as (select * from {{ ref('stg_customerdata') }}),
+products as (select * from {{ ref('stg_productdata') }}),
 
 joined as (
     select

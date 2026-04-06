@@ -1,5 +1,5 @@
 with src as (
-    select * from {{ ref('stg_customers') }}
+    select * from {{ ref('stg_customerdata') }}
 )
 select
     customer_id,
